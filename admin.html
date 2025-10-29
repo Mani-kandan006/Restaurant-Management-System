@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mani's Kitchen — Admin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <!-- logo -->
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/029/180/627/original/mk-luxury-logo-design-free-vector.jpg"
+            alt=" logo"
+            loading="lazy"
+          />
+          <div class="logo-text">
+            <span class="brand">Mani's</span>
+            <span class="sub">Kitchen</span>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin.html" class="active">Admin</a></li>
+          </ul>
+          <a href="order.html" class="btn btn-small">Order Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="loginSection" class="admin-login">
+        <h1>Admin Login</h1>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+      </section>
+
+      <section id="adminContent" class="admin-content">
+        <section class="admin-hero">
+          <h1>Admin Panel</h1>
+          <p>
+            Manage menu items: add new foods, modify existing ones, and update
+            prices.
+          </p>
+          <button id="logoutBtn" class="btn btn-small">Logout</button>
+        </section>
+
+        <section class="admin-form">
+          <h2>Add New Item</h2>
+          <form id="addItemForm">
+            <div class="form-group">
+              <label for="itemName">Name:</label>
+              <input type="text" id="itemName" required />
+            </div>
+            <div class="form-group">
+              <label for="itemCategory">Category:</label>
+              <select id="itemCategory" required>
+                <option value="South Indian">South Indian</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Beverages">Beverages</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="itemPrice">Price (₹):</label>
+              <input type="number" id="itemPrice" min="1" required />
+            </div>
+            <div class="form-group">
+              <label for="itemDesc">Description:</label>
+              <textarea id="itemDesc" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="itemImg">Image URL:</label>
+              <input type="url" id="itemImg" required />
+            </div>
+            <input type="hidden" id="editId" />
+            <button type="submit" class="btn">Add Item</button>
+          </form>
+        </section>
+
+        <section class="admin-list">
+          <h2>Existing Items</h2>
+          <div id="adminMenuList"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year5"></span> Mani's Kitchen</div>
+        <div><a href="contact.html">Location & Contact</a></div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

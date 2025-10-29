@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Billing — Mani's Kitchen</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <!-- logo -->
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/029/180/627/original/mk-luxury-logo-design-free-vector.jpg"
+            alt=" logo"
+            loading="lazy"
+          />
+          <div class="logo-text">
+            <span class="brand">Mani's</span>
+            <span class="sub">Kitchen</span>
+          </div>
+        </a>
+
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="admin.html">Admin</a></li>
+          </ul>
+          <a href="order.html" class="btn btn-small">Order Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="billing">
+        <h1>Order Receipt</h1>
+        <div class="billing-header">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/029/180/627/original/mk-luxury-logo-design-free-vector.jpg"
+            alt="Mani's Kitchen Logo"
+            class="billing-logo"
+          />
+          <p><strong>Mani's Kitchen</strong></p>
+          <p>Bill No: <span id="billNo"></span></p>
+          <p>Customer Name: <span id="customerName"></span></p>
+          <p>Date: <span id="billDate"></span></p>
+          <p>Time: <span id="billTime"></span></p>
+        </div>
+        <table class="billing-table">
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Qty</th>
+              <th>Price</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="billItems"></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3">Total</th>
+              <th>₹<span id="billTotal">0</span></th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Mani's Kitchen</div>
+        <div><a href="contact.html">Location & Contact</a></div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <button id="downloadBtn" class="btn">Download Bill</button>
+  </body>
+</html>
